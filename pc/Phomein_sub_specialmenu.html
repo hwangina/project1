@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Phomein::MENU</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="initial-scale=1, width=device-width">
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&amp;subset=korean" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="css/sub_style.css">
+<style>
+.content .in_index {height: 100px;}
+.content .in_index li:nth-child(4) img, .content .in_index li:nth-child(5) img {top: -20px;}
+.content .in_index li:nth-child(4):hover img, .content .in_index li:nth-child(4).on img, .content .in_index li:nth-child(5):hover img, .content .in_index li:nth-child(5).on img {top: 10px;}
+.content .cont_ex li:nth-child(5).active {height: 100px;}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="js/header.js"></script>
+<script>
+$(function(){
+	var order=0;
+	var distance=0;
+	var n=0;
+
+	$(".index li").eq(4).addClass("on"); //메뉴목록::페이지마다 eq값 변경
+	$(".cont_tit li").eq(0).addClass("active");
+	$(".cont_ex li").eq(0).addClass("active");
+	$(".in_index li").eq(0).addClass("on");
+	
+	$(".index li").click(function(){
+		$(".index li").removeClass("on");
+		$(this).addClass("on");
+		
+		order=$(this).index();
+	});
+	
+	$(".in_index li a").focusin(function(){
+		$(".in_index li").removeClass("on");
+		$(this).parent().addClass("on");
+	});
+	$(".in_index li a").focusout(function(){
+		$(this).parent().removeClass("on");
+	});
+	$(".in_index li").click(function(){
+		$(".in_index li").removeClass("on");
+		$(this).addClass("on");
+		n = $(this).index();
+		distance = n*460*(-1);
+		$(".in_content").css({"left":distance})
+		
+		$(".cont_tit li").removeClass("active");
+		$(".cont_tit li").eq(n).addClass("active");
+		$(".cont_ex li").removeClass("active");
+		$(".cont_ex li").eq(n).addClass("active");
+	});
+});
+</script>
+</head>
+<body>
+<div class="container">
+	<header id="header">
+		<div class="header_inner">
+			<div class="upper">
+				<div class="language">
+					<a href="#none" class="btn_lang">▼</a>
+					<ul>
+						<li class="KOR"><a href="#">KOR</a></li>
+						<li class="ENG"><a href="#">ENG</a></li>
+						<li class="CHN"><a href="#">CHN</a></li>
+					</ul>
+				</div>
+				<div class="LNB">
+					<ul>
+						<li><a href="#">사이트맵</a></li>
+						<li><a href="#">로그인·회원가입</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="menu_zone">
+				<div class="logo"><h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="logo"></a></h1></div>
+				<div class="GNB_visual">
+					<p>한결같은 정성,</p>
+					<p>변함없는 맛을 만들다.</p>
+					<img src="images/GNB_visual.png" alt="GNB_visual">
+				</div>
+				<nav id="GNB">
+					<ul>
+						<li><a href="#">포메인</a>
+							<ul>
+								<li><a href="#">브랜드 소개</a></li>
+								<li><a href="#">CEO 인사말</a></li>
+								<li><a href="#">연혁</a></li>
+							</ul>
+						</li>
+						<li><a href="Phomein_sub_phonoodle.html">메뉴</a>
+							<ul>
+								<li><a href="Phomein_sub_phonoodle.html">쌀국수</a></li>
+								<li><a href="Phomein_sub_phowrap.html">월남쌈</a></li>
+								<li><a href="Phomein_sub_friednoodle.html">볶음국수</a></li>
+								<li><a href="Phomein_sub_friedrice.html">볶음밥</a></li>
+								<li><a href="Phomein_sub_specialmenu.html">스페셜메뉴</a></li>
+								<li><a href="Phomein_sub_appetizer.html">에피타이저</a></li>
+							</ul>
+						</li>
+						<li><a href="#">매장</a>
+							<ul>
+								<li><a href="#">전국 매장</a></li>
+								<li><a href="#">매장 둘러보기</a></li>
+								<li><a href="#">개설 정보</a></li>
+								<li><a href="#">가맹 문의</a></li>
+							</ul>
+						</li>
+						<li><a href="#">포메인 소식</a>
+							<ul>
+								<li><a href="#">이벤트·프로모션</a></li>
+								<li><a href="#">뉴스·공지사항</a></li>
+							</ul>
+						</li>
+						<li><a href="#">고객센터</a>
+							<ul>
+								<li><a href="#">고객의 소리</a></li>
+								<li><a href="#">마일리지</a></li>
+								<li><a href="#">포메인 상품권</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<div class="content_wrap">
+		<div class="title">
+			<h3>MENU</h3>
+		</div>
+		<ul class="index">
+			<li class="pho_noodle"><a href="Phomein_sub_phonoodle.html">쌀국수</a></li>
+			<li class="pho_wrap"><a href="Phomein_sub_phowrap.html">월남쌈</a></li>
+			<li class="fried_noodle"><a href="Phomein_sub_friednoddle.html">볶음국수</a></li>
+			<li class="fried_rice"><a href="Phomein_sub_friedrice.html">볶음밥</a></li>
+			<li class="special_menu"><a href="#none">스페셜메뉴</a></li>
+			<li class="appetizer"><a href="Phomein_sub_appetizer.html">에피타이저</a></li>
+		</ul>
+		<div class="content">
+			<div class="frame">
+				<ul class="in_content">
+					<li><img src="images/special1.png" alt="Chicken & Veggie"></li>
+					<li><img src="images/special2.png" alt="Fried Cashew Nuts Chicken"></li>
+					<li><img src="images/special3.png" alt="Bun Bo Xao"></li>
+					<li><img src="images/special4.png" alt="Bun cha"></li>
+					<li><img src="images/special5.png" alt="Fried Scallion Pork Belly"></li>
+				</ul>
+			</div>
+			<ul class="cont_tit">
+				<li><h6>치킨 앤 베지<h6><br/><p>Chicken & Veggie</p></li>
+				<li><h6>포메인 깜풍기<h6><br/><p>Fried Cashew Nuts Chicken</p></li>
+				<li><h6>분보싸오<h6><br/><p>Bun Bo Xao</p></li>
+				<li><h6>분짜<h6><br/><p>Bun cha</p></li>
+				<li><h6>대파 삼겹살 볶음<h6><br/><p>Fried Scallion Pork Belly</p></li>
+			</ul>
+			<ul class="cont_ex">
+				<li>버섯, 가지, 시금치 등 각종 채소<br/>와 닭고기를 매콤한 포메인 특제<br/>소스와 함께 볶아낸 요리</li>
+				<li>바삭하게 튀긴 닭다리살에<br/>각종 야채, 캐슈넛을 함께 볶은<br/>매콤달콤 고소한 맛의 요리</li>
+				<li>부드러운 소고기와 달콤한 파인<br/>애플을 양파와 함께 볶아낸 후,<br/>신선한 야채,쌀국수와 함께 피쉬소스로 비벼먹는 건강 메뉴</li>
+				<li>풍미가 살아있는 목살 직화구이와 신선한 채소를 새콤달콤 특제소스에 적셔 먹는 이색 쌀국수</li>
+				<li>바싹 튀겨낸 삼겹살과 대파, 양파를 포메인만의 특제 피쉬소스로 볶아낸 요리<br/>( ** 대파 삼겹살 볶음은 일부 매장에서는 제공되지 않으므로 유의 바랍니다.)</li>
+			</ul>
+			<ul class="in_index">
+				<li><a href="#none"><p>치킨 앤 베지</p><img src="images/special1.png" alt="Chicken & Veggie"></a></li>
+				<li><a href="#none"><p>포메인 깐풍기</p><img src="images/special2.png" alt="Fried Cashew Nuts Chicken"></a></li>
+				<li><a href="#none"><p>분보싸오</p><img src="images/special3.png" alt="Bun Bo Xao"></a></li>
+				<li><a href="#none"><p>분짜</p><img src="images/special4.png" alt="Bun cha"></a></li>
+				<li><a href="#none"><p>대파 삼겹살 볶음</p><img src="images/special5.png" alt="Fried Scallion Pork Belly"></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer_inner">
+			<div class="upper clearfix">
+				<div class="f_logo"><a href="index.html"><img src="images/logo_footer.png" alt="logo"></a></div>
+				<ul class="notice">
+					<li><a href="">개인정보 취급방침</a></li>
+					<li><a href="">이메일 무단 수집 거부</a></li>
+					<li><a href="">이용약관</a></li>
+					<li><a href="">Intranet</a></li>
+				</ul>
+				<ul class="sns">
+					<li><a href="https://www.facebook.com/phomein"><img src="images/facebook.png" alt="facebook"></a></li>
+					<li><a href="https://www.instagram.com/phomeinkr/"><img src="images/insta.png" alt="instagram"></a></li>
+					<li><a href="https://blog.naver.com/dk_phomein"><img src="images/blog.png" alt="blog"></a></li>
+					<li><a href="http://www.phomein.com/Community/Notice/?mode=view&BIdx=406&p=1"><img src="images/kakao.png" alt="kakao present"></a></li>
+				</ul>
+			</div>
+			<div class="bottom clearfix">
+				<ul>
+					<li>대표번호 &nbsp;&nbsp;<b>1899-2422</b></li>
+					<li>직통번호 &nbsp; &nbsp;<b>031-780-1500</b></li>
+					<li>E-mail &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>help@phomein.com</b></li>
+				</ul>
+				<img src="images/footer.png" alt="confirm mark">
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

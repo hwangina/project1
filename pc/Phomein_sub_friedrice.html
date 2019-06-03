@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Phomein::MENU</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="initial-scale=1, width=device-width">
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&amp;subset=korean" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="css/sub_style.css">
+<style>
+.content .in_index li img {top: -20px;}
+.content .in_index li:hover img, .content .in_index li.on img {top: 10px;}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="js/header.js"></script>
+<script>
+$(function(){
+	var order=0;
+	var distance=0;
+	var n=0;
+
+	$(".index li").eq(3).addClass("on"); //메뉴목록::페이지마다 eq값 변경
+	$(".cont_tit li").eq(0).addClass("active");
+	$(".cont_ex li").eq(0).addClass("active");
+	$(".in_index li").eq(0).addClass("on");
+	
+	$(".index li").click(function(){
+		$(".index li").removeClass("on");
+		$(this).addClass("on");
+		
+		order=$(this).index();
+	});
+	
+	$(".in_index li a").focusin(function(){
+		$(".in_index li").removeClass("on");
+		$(this).parent().addClass("on");
+	});
+	$(".in_index li a").focusout(function(){
+		$(this).parent().removeClass("on");
+	});
+	$(".in_index li").click(function(){
+		$(".in_index li").removeClass("on");
+		$(this).addClass("on");
+		n = $(this).index();
+		distance = n*460*(-1);
+		$(".in_content").css({"left":distance})
+		
+		$(".cont_tit li").removeClass("active");
+		$(".cont_tit li").eq(n).addClass("active");
+		$(".cont_ex li").removeClass("active");
+		$(".cont_ex li").eq(n).addClass("active");
+	});
+});
+</script>
+</head>
+<body>
+<div class="container">
+	<header id="header">
+		<div class="header_inner">
+			<div class="upper">
+				<div class="language">
+					<a href="#none" class="btn_lang">▼</a>
+					<ul>
+						<li class="KOR"><a href="#">KOR</a></li>
+						<li class="ENG"><a href="#">ENG</a></li>
+						<li class="CHN"><a href="#">CHN</a></li>
+					</ul>
+				</div>
+				<div class="LNB">
+					<ul>
+						<li><a href="#">사이트맵</a></li>
+						<li><a href="#">로그인·회원가입</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="menu_zone">
+				<div class="logo"><h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="logo"></a></h1></div>
+				<div class="GNB_visual">
+					<p>한결같은 정성,</p>
+					<p>변함없는 맛을 만들다.</p>
+					<img src="images/GNB_visual.png" alt="GNB_visual">
+				</div>
+				<nav id="GNB">
+					<ul>
+						<li><a href="#">포메인</a>
+							<ul>
+								<li><a href="#">브랜드 소개</a></li>
+								<li><a href="#">CEO 인사말</a></li>
+								<li><a href="#">연혁</a></li>
+							</ul>
+						</li>
+						<li><a href="Phomein_sub_phonoodle.html">메뉴</a>
+							<ul>
+								<li><a href="Phomein_sub_phonoodle.html">쌀국수</a></li>
+								<li><a href="Phomein_sub_phowrap.html">월남쌈</a></li>
+								<li><a href="Phomein_sub_friednoodle.html">볶음국수</a></li>
+								<li><a href="Phomein_sub_friedrice.html">볶음밥</a></li>
+								<li><a href="Phomein_sub_specialmenu.html">스페셜메뉴</a></li>
+								<li><a href="Phomein_sub_appetizer.html">에피타이저</a></li>
+							</ul>
+						</li>
+						<li><a href="#">매장</a>
+							<ul>
+								<li><a href="#">전국 매장</a></li>
+								<li><a href="#">매장 둘러보기</a></li>
+								<li><a href="#">개설 정보</a></li>
+								<li><a href="#">가맹 문의</a></li>
+							</ul>
+						</li>
+						<li><a href="#">포메인 소식</a>
+							<ul>
+								<li><a href="#">이벤트·프로모션</a></li>
+								<li><a href="#">뉴스·공지사항</a></li>
+							</ul>
+						</li>
+						<li><a href="#">고객센터</a>
+							<ul>
+								<li><a href="#">고객의 소리</a></li>
+								<li><a href="#">마일리지</a></li>
+								<li><a href="#">포메인 상품권</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<div class="content_wrap">
+		<div class="title">
+			<h3>MENU</h3>
+		</div>
+		<ul class="index">
+			<li class="pho_noodle"><a href="Phomein_sub_phonoodle.html">쌀국수</a></li>
+			<li class="pho_wrap"><a href="Phomein_sub_phowrap.html">월남쌈</a></li>
+			<li class="fried_noodle"><a href="Phomein_sub_friednoodle.html">볶음국수</a></li>
+			<li class="fried_rice"><a href="#none">볶음밥</a></li>
+			<li class="special_menu"><a href="Phomein_sub_specialmenu.html">스페셜메뉴</a></li>
+			<li class="appetizer"><a href="Phomein_sub_appetizer.html">에피타이저</a></li>
+		</ul>
+		<div class="content">
+			<div class="frame">
+				<ul class="in_content">
+					<li><img src="images/rice1.png" alt="Beef Fried Rice"></li>
+					<li><img src="images/rice2.png" alt="Chili Fried Rice"></li>
+					<li><img src="images/rice3.png" alt="Chicken Fried Rice"></li>
+					<li><img src="images/rice4.png" alt="Pineapple Shrimp Fried Rice"></li>
+					<li><img src="images/rice5.png" alt="Rice Topped with Pork"></li>
+					<li><img src="images/rice6.png" alt="Rice Topped with Chicken"></li>
+					<li><img src="images/rice7.png" alt="Chicken & Veggie Rice"></li>
+				</ul>
+			</div>
+			<ul class="cont_tit">
+				<li><h6>소고기 볶음밥<h6><br/><p>Beef Fried Rice</p></li>
+				<li><h6>칠리 볶음밥<h6><br/><p>Chili Fried Rice</p></li>
+				<li><h6>닭고기 볶음밥<h6><br/><p>Chicken Fried Rice</p></li>
+				<li><h6>파인애플 볶음밥<h6><br/><p>Pineapple Shrimp Fried Rice</p></li>
+				<li><h6>돼지고기 덮밥<h6><br/><p>Rice Topped with Pork</p></li>
+				<li><h6>닭고기 덮밥<h6><br/><p>Rice Topped with Chicken</p></li>
+				<li><h6>치킨 앤 베지 덮밥<h6><br/><p>Chicken & Veggie Rice</p></li>
+			</ul>
+			<ul class="cont_ex">
+				<li>소고기, 양파, 계란을 특제 소스<br/>로 볶아낸 포메인의 인기메뉴</li>
+				<li>신선한 야채, 새우, 오징어,<br/>버섯, 계란을 특제소스로<br/>볶아낸 매콤한 볶음밥</li>
+				<li>닭고기, 양파, 계란, 버섯,<br/>신선한 야채를 포메인의 특제<br/>소스로 볶아낸 담백한 볶음밥</li>
+				<li>파인애플, 새우, 오징어,<br/>버섯, 계란, 신선한 야채를<br/>피쉬소스와 함께 볶아낸 볶음밥</li>
+				<li>메밀 간장에 비벼 먹는<br/>돼지고기 덮밥</li>
+				<li>메밀 간장에 비벼 먹는<br/>닭고기 덮밥</li>
+				<li>버섯, 가지, 시금치 등 각종<br/>채소와 닭고기를 매콤한 포메인<br/>특제 소스와 함께 볶아낸 덮밥</li>
+			</ul>
+			<ul class="in_index">
+				<li><a href="#none"><p>소고기 볶음밥</p><img src="images/rice1.png" alt="Beef Fried Rice"></a></li>
+				<li><a href="#none"><p>칠리 볶음밥</p><img src="images/rice2.png" alt="Chili Fried Rice"></a></li>
+				<li><a href="#none"><p>닭고기 볶음밥</p><img src="images/rice3.png" alt="Chicken Fried Rice"></a></li>
+				<li><a href="#none"><p>파인애플 볶음밥</p><img src="images/rice4.png" alt="Pineapple Shrimp Fried Rice"></a></li>
+				<li><a href="#none"><p>돼지고기 덮밥</p><img src="images/rice5.png" alt="Rice Topped with Pork"></a></li>
+				<li><a href="#none"><p>닭고기 덮밥</p><img src="images/rice6.png" alt="Rice Topped with Chicken"></a></li>
+				<li><a href="#none"><p>치킨 앤 베지 덮밥</p><img src="images/rice7.png" alt="Chicken & Veggie Rice"></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer_inner">
+			<div class="upper clearfix">
+				<div class="f_logo"><a href="index.html"><img src="images/logo_footer.png" alt="logo"></a></div>
+				<ul class="notice">
+					<li><a href="">개인정보 취급방침</a></li>
+					<li><a href="">이메일 무단 수집 거부</a></li>
+					<li><a href="">이용약관</a></li>
+					<li><a href="">Intranet</a></li>
+				</ul>
+				<ul class="sns">
+					<li><a href="https://www.facebook.com/phomein"><img src="images/facebook.png" alt="facebook"></a></li>
+					<li><a href="https://www.instagram.com/phomeinkr/"><img src="images/insta.png" alt="instagram"></a></li>
+					<li><a href="https://blog.naver.com/dk_phomein"><img src="images/blog.png" alt="blog"></a></li>
+					<li><a href="http://www.phomein.com/Community/Notice/?mode=view&BIdx=406&p=1"><img src="images/kakao.png" alt="kakao present"></a></li>
+				</ul>
+			</div>
+			<div class="bottom clearfix">
+				<ul>
+					<li>대표번호 &nbsp;&nbsp;<b>1899-2422</b></li>
+					<li>직통번호 &nbsp; &nbsp;<b>031-780-1500</b></li>
+					<li>E-mail &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>help@phomein.com</b></li>
+				</ul>
+				<img src="images/footer.png" alt="confirm mark">
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

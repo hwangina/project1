@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Phomein::MENU</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="initial-scale=1, width=device-width">
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&amp;subset=korean" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="css/sub_style.css">
+<style>
+.content .in_index li:nth-child(3) a, .content .in_index li:nth-child(4) a {padding-top: 15px;}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="js/header.js"></script>
+<script>
+$(function(){
+	var order=0;
+	var distance=0;
+	var n=0;
+
+	$(".index li").eq(0).addClass("on"); //메뉴목록::페이지마다 eq값 변경
+	$(".cont_tit li").eq(0).addClass("active");
+	$(".cont_ex li").eq(0).addClass("active");
+	$(".in_index li").eq(0).addClass("on");
+	
+	$(".index li").click(function(){
+		$(".index li").removeClass("on");
+		$(this).addClass("on");
+		
+		order=$(this).index();
+	});
+	
+	$(".in_index li a").focusin(function(){
+		$(".in_index li").removeClass("on");
+		$(this).parent().addClass("on");
+	});
+	$(".in_index li a").focusout(function(){
+		$(this).parent().removeClass("on");
+	});
+	$(".in_index li").click(function(){
+		$(".in_index li").removeClass("on");
+		$(this).addClass("on");
+		n = $(this).index();
+		distance = n*460*(-1);
+		$(".in_content").css({"left":distance})
+		
+		$(".cont_tit li").removeClass("active");
+		$(".cont_tit li").eq(n).addClass("active");
+		$(".cont_ex li").removeClass("active");
+		$(".cont_ex li").eq(n).addClass("active");
+	});
+});
+</script>
+</head>
+<body>
+<div class="container">
+	<header id="header">
+		<div class="header_inner">
+			<div class="upper">
+				<div class="language">
+					<a href="#none" class="btn_lang">▼</a>
+					<ul>
+						<li class="KOR"><a href="#">KOR</a></li>
+						<li class="ENG"><a href="#">ENG</a></li>
+						<li class="CHN"><a href="#">CHN</a></li>
+					</ul>
+				</div>
+				<div class="LNB">
+					<ul>
+						<li><a href="#">사이트맵</a></li>
+						<li><a href="#">로그인·회원가입</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="menu_zone">
+				<div class="logo"><h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="logo"></a></h1></div>
+				<div class="GNB_visual">
+					<p>한결같은 정성,</p>
+					<p>변함없는 맛을 만들다.</p>
+					<img src="images/GNB_visual.png" alt="GNB_visual">
+				</div>
+				<nav id="GNB">
+					<ul>
+						<li><a href="#">포메인</a>
+							<ul>
+								<li><a href="#">브랜드 소개</a></li>
+								<li><a href="#">CEO 인사말</a></li>
+								<li><a href="#">연혁</a></li>
+							</ul>
+						</li>
+						<li><a href="Phomein_sub_phonoodle.html">메뉴</a>
+							<ul>
+								<li><a href="Phomein_sub_phonoodle.html">쌀국수</a></li>
+								<li><a href="Phomein_sub_phowrap.html">월남쌈</a></li>
+								<li><a href="Phomein_sub_friednoodle.html">볶음국수</a></li>
+								<li><a href="Phomein_sub_friedrice.html">볶음밥</a></li>
+								<li><a href="Phomein_sub_specialmenu.html">스페셜메뉴</a></li>
+								<li><a href="Phomein_sub_appetizer.html">에피타이저</a></li>
+							</ul>
+						</li>
+						<li><a href="#">매장</a>
+							<ul>
+								<li><a href="#">전국 매장</a></li>
+								<li><a href="#">매장 둘러보기</a></li>
+								<li><a href="#">개설 정보</a></li>
+								<li><a href="#">가맹 문의</a></li>
+							</ul>
+						</li>
+						<li><a href="#">포메인 소식</a>
+							<ul>
+								<li><a href="#">이벤트·프로모션</a></li>
+								<li><a href="#">뉴스·공지사항</a></li>
+							</ul>
+						</li>
+						<li><a href="#">고객센터</a>
+							<ul>
+								<li><a href="#">고객의 소리</a></li>
+								<li><a href="#">마일리지</a></li>
+								<li><a href="#">포메인 상품권</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<div class="content_wrap">
+		<div class="title">
+			<h3>MENU</h3>
+		</div>
+		<ul class="index">
+			<li class="pho_noodle"><a href="#none">쌀국수</a></li>
+			<li class="pho_wrap"><a href="Phomein_sub_phowrap.html">월남쌈</a></li>
+			<li class="fried_noodle"><a href="Phomein_sub_friednoodle.html">볶음국수</a></li>
+			<li class="fried_rice"><a href="Phomein_sub_friedrice.html">볶음밥</a></li>
+			<li class="special_menu"><a href="Phomein_sub_specialmenu.html">스페셜메뉴</a></li>
+			<li class="appetizer"><a href="Phomein_sub_appetizer.html">에피타이저</a></li>
+		</ul>
+		<div class="content">
+			<div class="frame">
+				<ul class="in_content">
+					<li><img src="images/menu1.png" alt="Beef combination pho"></li>
+					<li><img src="images/menu2.png" alt="Beef spicy pho"></li>
+					<li><img src="images/menu3.png" alt="Premium beef pho"></li>
+					<li><img src="images/menu4.png" alt="Seafood spicy pho"></li>
+					<li><img src="images/menu5.png" alt="Beef chunk pho"></li>
+					<li><img src="images/menu6.png" alt="Seafood pho"></li>
+					<li><img src="images/menu7.png" alt="Checken pho"></li>
+				</ul>
+			</div>
+			<ul class="cont_tit">
+				<li><h6>포메인 쌀국수<h6><br/><p>Beef Combination Pho</p></li>
+				<li><h6>스파이시 포<h6><br/><p>Beef Spicy Pho</p></li>
+				<li><h6>프리미엄 소고기 쌀국수<h6><br/><p>Premium Beef Pho</p></li>
+				<li><h6>매운 해산물 쌀국수<h6><br/><p>Seafood Spicy Pho</p></li>
+				<li><h6>비프 청크 포<h6><br/><p>Beef Chunk Pho</p></li>
+				<li><h6>해산물 쌀국수<h6><br/><p>Seafood Pho</p></li>
+				<li><h6>닭고기 쌀국수<h6><br/><p>Chicken Pho</p></li>
+			</ul>
+			<ul class="cont_ex">
+				<li>얇게 썰은 고기 토핑의<br/>담백한 쌀국수(양지, 차돌)</li>
+				<li>깔끔하고 개운한 맛의<br/>매운 소고기 쌀국수</li>
+				<li>최고급 부위의 생고기를<br/>넣은 프리미엄 쌀국수</li>
+				<li>꽃게, 새우, 소라, 오징어,<br/>주꾸미 등의 다양한 해산물을<br/>넣은 매운 쌀국수</li>
+				<li>소고기 목심을 두툼하게<br/>썰어 넣은 프리미엄 쌀국수</li>
+				<li>꽃게, 새우, 소라, 오징어,<br/>주꾸미 등의 다양한 해산물을</br>넣은 깔끔한 쌀국수</li>
+				<li>부드러운 닭 가슴살 쌀국수</li>
+			</ul>
+			<ul class="in_index">
+				<li><a href="#none"><p>포메인 쌀국수</p><img src="images/menu1.png" alt="Beef Combination Pho"></a></li>
+				<li><a href="#none"><p>스파이시 포</p><img src="images/menu2.png" alt="Beef spicy pho"></a></li>
+				<li><a href="#none"><p>프리미엄 소고기 쌀국수</p><img src="images/menu3.png" alt="Premium beef pho"></a></li>
+				<li><a href="#none"><p>매운 해산물 쌀국수</p><img src="images/menu4.png" alt="Seafood spicy pho"></a></li>
+				<li><a href="#none"><p>비프 청크 포</p><img src="images/menu5.png" alt="Beef chunk pho"></a></li>
+				<li><a href="#none"><p>해산물 쌀국수</p><img src="images/menu6.png" alt="Seafood pho"></a></li>
+				<li><a href="#none"><p>닭고기 쌀국수</p><img src="images/menu7.png" alt="Checken pho"></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer_inner">
+			<div class="upper clearfix">
+				<div class="f_logo"><a href="index.html"><img src="images/logo_footer.png" alt="logo"></a></div>
+				<ul class="notice">
+					<li><a href="">개인정보 취급방침</a></li>
+					<li><a href="">이메일 무단 수집 거부</a></li>
+					<li><a href="">이용약관</a></li>
+					<li><a href="">Intranet</a></li>
+				</ul>
+				<ul class="sns">
+					<li><a href="https://www.facebook.com/phomein"><img src="images/facebook.png" alt="facebook"></a></li>
+					<li><a href="https://www.instagram.com/phomeinkr/"><img src="images/insta.png" alt="instagram"></a></li>
+					<li><a href="https://blog.naver.com/dk_phomein"><img src="images/blog.png" alt="blog"></a></li>
+					<li><a href="http://www.phomein.com/Community/Notice/?mode=view&BIdx=406&p=1"><img src="images/kakao.png" alt="kakao present"></a></li>
+				</ul>
+			</div>
+			<div class="bottom clearfix">
+				<ul>
+					<li>대표번호 &nbsp;&nbsp;<b>1899-2422</b></li>
+					<li>직통번호 &nbsp; &nbsp;<b>031-780-1500</b></li>
+					<li>E-mail &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>help@phomein.com</b></li>
+				</ul>
+				<img src="images/footer.png" alt="confirm mark">
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
